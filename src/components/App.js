@@ -62,10 +62,9 @@ function reducer(state, action) {
       };
     case "restart":
       return {
-        ...state,
-        index: 0,
-        answer: null,
-        points: 0,
+        ...initialState,
+        questions: state.questions,
+        highscore: state.highscore,
         status: "ready",
       };
     default:
